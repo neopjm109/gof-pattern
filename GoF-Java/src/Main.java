@@ -1,4 +1,5 @@
-import dev.jmpark.gof.creational.prototype.PrototypeDocument;
+import dev.jmpark.gof.creational.prototype.NovelBook;
+import dev.jmpark.gof.creational.prototype.PrototypeBook;
 import dev.jmpark.gof.creational.singleton.SingletonManager;
 
 // Press ⇧ twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -25,12 +26,13 @@ public class Main {
          * Prototype
          */
         System.out.println("\n########## Prototype START ##########\n");
-        PrototypeDocument proto1 = new PrototypeDocument("James Park", "Best Develop");
-        PrototypeDocument proto2 = proto1.clone();
+        NovelBook protoNovel1 = new NovelBook("James Park", "Best Develop");
+        protoNovel1.setImage("keyboard");
+        NovelBook protoNovel2 = (NovelBook) protoNovel1.copy();
+        protoNovel2.setImage("keyboard and mouse");
 
-        proto1.setContent("Best Fullstack Developer");
-        System.out.println("proto1 의 결과 : " + proto1.toString());
-        System.out.println("proto2 의 결과 : " + proto2.toString());
+        System.out.println("protoNovel1 의 결과 : " + protoNovel1.toString());
+        System.out.println("protoNovel2 의 결과 : " + protoNovel2.toString());
         System.out.println("\n########## Prototype END ##########\n");
     }
 }
