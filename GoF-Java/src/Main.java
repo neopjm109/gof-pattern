@@ -1,4 +1,3 @@
-import dev.jmpark.gof.creational.prototype.NovelBook;
 import dev.jmpark.gof.creational.prototype.PrototypeBook;
 import dev.jmpark.gof.creational.singleton.SingletonManager;
 
@@ -26,13 +25,12 @@ public class Main {
          * Prototype
          */
         System.out.println("\n########## Prototype START ##########\n");
-        NovelBook protoNovel1 = new NovelBook("James Park", "Best Develop");
-        protoNovel1.setImage("keyboard");
-        NovelBook protoNovel2 = (NovelBook) protoNovel1.copy();
-        protoNovel2.setImage("keyboard and mouse");
+        PrototypeBook protoBook1 = new PrototypeBook("James Park", "Best Develop");
+        PrototypeBook protoBook2 = protoBook1.copy();
+        protoBook2.setContent("Fullstack Developer");
 
-        System.out.println("protoNovel1 의 결과 : " + protoNovel1.toString());
-        System.out.println("protoNovel2 의 결과 : " + protoNovel2.toString());
+        System.out.println("protoBook1 의 결과 : " + protoBook1);
+        System.out.println("protoBook2 의 결과 : " + protoBook2);
         System.out.println("\n########## Prototype END ##########\n");
     }
 }
