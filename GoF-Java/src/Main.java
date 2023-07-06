@@ -1,3 +1,4 @@
+import dev.jmpark.gof.creational.builder.Book;
 import dev.jmpark.gof.creational.prototype.PrototypeBook;
 import dev.jmpark.gof.creational.singleton.SingletonManager;
 
@@ -32,5 +33,18 @@ public class Main {
         System.out.println("protoBook1 의 결과 : " + protoBook1);
         System.out.println("protoBook2 의 결과 : " + protoBook2);
         System.out.println("\n########## Prototype END ##########\n");
+
+        /**
+         * Builder
+         */
+        System.out.println("\n########## Builder START ##########\n");
+        Book testBook = new Book.Builder()
+                .author("James Park")
+                .name("Desgin Pattern 23")
+                .contents("this pattern is Builder Pattern")
+                .build();
+
+        System.out.println("testBook 의 결과 : " + testBook);
+        System.out.println("\n########## Builder END ##########\n");
     }
 }
