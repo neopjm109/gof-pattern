@@ -40,11 +40,16 @@ public class Main {
         System.out.println("\n########## Builder START ##########\n");
         Book testBook = new Book.Builder()
                 .author("James Park")
-                .name("Desgin Pattern 23")
+                .name("Design Pattern 23")
                 .contents("this pattern is Builder Pattern")
                 .build();
 
+        Book harryPotter = new Book.Builder()
+                .name("Harry potter")
+                .build();
+
         System.out.println("testBook 의 결과 : " + testBook);
+        System.out.println("harryPotter 의 결과 : " + harryPotter);
         System.out.println("\n########## Builder END ##########\n");
     }
 }
