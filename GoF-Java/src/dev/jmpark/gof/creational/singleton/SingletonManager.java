@@ -1,4 +1,4 @@
-package dev.jmpark.gof.singleton;
+package dev.jmpark.gof.creational.singleton;
 
 /**
  * 자바 어플리케이션이 실행되는 동안 단 하나의 객체만을 생성한다.
