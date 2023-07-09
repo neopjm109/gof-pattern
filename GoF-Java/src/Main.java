@@ -1,4 +1,6 @@
+import dev.jmpark.gof.creational.abstract_factory.RealCarFactory;
 import dev.jmpark.gof.creational.builder.Book;
+import dev.jmpark.gof.creational.factory.*;
 import dev.jmpark.gof.creational.prototype.PrototypeBook;
 import dev.jmpark.gof.creational.singleton.SingletonManager;
 
@@ -51,5 +53,33 @@ public class Main {
         System.out.println("testBook 의 결과 : " + testBook);
         System.out.println("harryPotter 의 결과 : " + harryPotter);
         System.out.println("\n########## Builder END ##########\n");
+
+        /**
+         * Factory
+         */
+        System.out.println("\n########## Factory START ##########\n");
+        CarFactory carFactory = new CarFactory();
+        Car kia = carFactory.createCar("kia");
+        Car hyundai = carFactory.createCar("hyundai");
+        Car bmw = carFactory.createCar("bmw");
+
+        System.out.println("kia 의 결과 : " + kia.brand());
+        System.out.println("hyundai 의 결과 : " + hyundai.brand());
+        System.out.println("bmw 의 결과 : " + bmw.brand());
+        System.out.println("\n########## Factory END ##########\n");
+
+        /**
+         * Abstract Factory
+         */
+        System.out.println("\n########## AbstractFactory START ##########\n");
+        RealCarFactory ralCarFactory = new RealCarFactory();
+        Car absKia = carFactory.createCar("kia");
+        Car absHyundai = carFactory.createCar("hyundai");
+        Car absBmw = carFactory.createCar("bmw");
+
+        System.out.println("abs kia 의 결과 : " + absKia.brand());
+        System.out.println("abs hyundai 의 결과 : " + absHyundai.brand());
+        System.out.println("abs bmw 의 결과 : " + absBmw.brand());
+        System.out.println("\n########## AbstractFactory END ##########\n");
     }
 }
